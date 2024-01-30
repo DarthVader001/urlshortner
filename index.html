@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>
+        <h1>URL SHORTNER</h1>
+    <br> <br>
+    </p>
+    
+    <div id="url-shortener">
+        <label for="original-url"><h3>Enter URL:</h3></label><br>
+        <input type="text" id="original-url" placeholder="https://example.com">
+        <button onclick="shortenUrl()">Shorten</button>
+
+        <div id="shortened-url"></div>
+    </div>
+
+    <script>
+        function shortenUrl() {
+            var originalUrl = document.getElementById("original-url").value;
+            var shortenedUrl = generateShortUrl(originalUrl);
+            displayShortenedUrl(shortenedUrl);
+        }
+
+        function generateShortUrl(originalUrl) {
+            // This is where you would make a request to the backend to generate a short URL.
+            // For simplicity, let's just add a random string to the original URL here.
+            var randomString = Math.random().toString(36).substring(7);
+            return "https://your-shortener-domain/" + randomString;
+        }
+
+        function displayShortenedUrl(shortenedUrl) {
+            var displayElement = document.getElementById("shortened-url");
+            displayElement.innerHTML = "<strong>Shortened URL:</strong> <a href='" + shortenedUrl + "' target='_blank'>" + shortenedUrl + "</a>";
+        }
+    </script>
+</body>
+</html>

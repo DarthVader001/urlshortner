@@ -1,0 +1,71 @@
+
+
+#url-shortener {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#shortened-url {
+    margin-top: 20px;
+}
+
+body {
+    background-image: url(bg.webp);
+    background-color: #8f94fb;
+    background-size: cover;
+    overflow-y: hidden;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  html, body {
+    height: 100%;
+}
+h1{
+    color:#fff;
+    background-color: #8f94fb;
+    border-radius: 2px;
+    text-align: center;
+  }
+
+ h3{
+    color: #8f94fb;
+ }
+  
+  #short-url-container {
+    margin-top: 20px;
+  }
+  #short-url-container p{
+    text-align: center;
+    color: #fff;
+  }
+  
+  #short-url {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #short-url a {
+    word-wrap: break-word;
+    margin-right: 10px;
+    color: #fff;
+  }
+
